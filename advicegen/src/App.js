@@ -21,12 +21,21 @@ class App extends React.Component {
         }); 
     }
 
+    refreshPage() {
+        window.location.reload();
+    }
+
      render() {
         const {advice} = this.state;
         return (
             <div className="app">
                 <div className="card">
                     <div className="heading">{advice}</div>
+                    <button className="button" type="button" onClick={this.refreshPage}>
+                        <span>
+                            Give Me Advice!
+                        </span>
+                    </button>
                 </div>
             </div>
         );
